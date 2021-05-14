@@ -1,0 +1,69 @@
+@use '../forwards';
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: $font-color-dark;
+}
+
+.heading-primary {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 16px;
+  padding-left: 16px;
+  //letter spacing not applied to first lefft on left aside, so need to compensate with padding.
+  display: block;
+  color: $font-color-light;
+  text-transform: uppercase;
+  text-align: center;
+  animation: moveInLeft 1s forwards;
+
+  &--dark {
+    @extend .heading-primary;
+    color: $font-color-dark;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 0.4em;
+    letter-spacing: 12px;
+    padding-left: 0;
+    animation: moveInRight 1s;
+  }
+
+  &--funky {
+    @include background-Clip-Text;
+  }
+
+  @include media(tablet-portrait) {
+    font-size: 4rem;
+  }
+  @include media(tablet) {
+    font-size: 6.4rem;
+    &--sub {
+      font-size: 0.3em;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  &--funky {
+    @include background-Clip-Text;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &--funky {
+    @include background-Clip-Text;
+  }
+}

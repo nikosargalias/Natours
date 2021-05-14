@@ -1,0 +1,28 @@
+.signup-section {
+  @include container;
+
+  background-image: linear-gradient(
+      105deg,
+      rgba(rgb(237, 237, 237), 0.9) 85%,
+      transparent 95%
+    ),
+    url("../assets/img/nat-8.jpg");
+  background-size: cover;
+
+  @include media(tablet) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(rgb(237, 237, 237), 0.9) 70%,
+        transparent 70%
+      ),
+      url("../assets/img/nat-8.jpg");
+  }
+  @include media(desktop) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(rgb(237, 237, 237), 0.9) 50%,
+        transparent 50%
+      ),
+      url("../assets/img/nat-8.jpg");
+  }
+}

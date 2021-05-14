@@ -1,0 +1,52 @@
+.img-composition {
+  position: relative;
+  display: grid;
+
+  &__photo {
+    width: 55%;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: all 0.5s;
+    position: relative;
+
+    &:first-child {
+      z-index: 3;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      top: 10%;
+      right: -10%;
+    }
+    &:nth-child(3) {
+      position: absolute;
+      top: 10%;
+      left: -10%;
+    }
+
+    &:hover {
+      z-index: 10;
+      transform: scale(1.1);
+      outline: solid 5px $color-primary;
+      outline-offset: 5px;
+    }
+
+    @include media(tablet) {
+      margin-top: 10%;
+      margin-bottom: 10%;
+
+      &:nth-child(2) {
+        top: 20%;
+        right: 0%;
+      }
+      &:nth-child(3) {
+        top: -20%;
+        left: 0%;
+      }
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}

@@ -1,0 +1,25 @@
+.features-section {
+  // padding: $gutter-section 0;
+  max-width: 100%;
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    & > :not(:last-child) {
+      margin-bottom: $gutter-elem-big;
+    }
+
+    @include media(tablet) {
+      flex-direction: row;
+
+      & > :not(:last-child) {
+        margin: 0;
+        margin-right: $gutter-elem-big;
+      }
+    }
+  }
+}

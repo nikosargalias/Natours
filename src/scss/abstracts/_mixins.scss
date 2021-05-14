@@ -1,0 +1,29 @@
+@mixin container() {
+  width: 1100px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@mixin media($device) {
+  @if $device == "mobile" {
+    @media (max-width: map-get($breakpoint, $device)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($breakpoint, $device)) {
+      @content;
+    }
+  }
+}
+
+@mixin grid-section-center() {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  align-items: center;
+}
+
+@mixin background-Clip-Text() {
+  background: $color-linear-gradient;
+  background-clip: text;
+  color: transparent;
+}

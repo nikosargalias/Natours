@@ -1,0 +1,33 @@
+.tours-section {
+  // padding: $gutter-section 0;
+
+  &__heading-container {
+    @include container;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: $gutter-heading;
+  }
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media(tablet) {
+      flex-direction: row;
+    }
+
+    & > :not(:last-child) {
+      margin-bottom: $gutter-elem-big;
+
+      @include media(tablet) {
+        margin-bottom: 0;
+        margin-right: $gutter-elem-big;
+      }
+    }
+  }
+}

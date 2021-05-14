@@ -1,0 +1,38 @@
+$font-color-dark: #777;
+$font-color-light: #fff;
+
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-background: rgba(242, 241, 241, 1);
+$color-background-darker: rgb(236, 236, 236);
+$color-linear-gradient: linear-gradient(
+  to right bottom,
+  rgba($color-primary-light, 0.8),
+  rgba($color-primary-dark, 0.8)
+);
+
+// gutter for margins
+$gutter-heading: 6rem;
+$gutter-elem-small: 1rem;
+$gutter-elem-big: 4rem;
+$gutter-section: 10rem;
+
+// containers
+$width-max: 90%;
+$width-inner: 500px;
+
+// breakpoints
+$breakpoint: (
+  "mobile": 967px,
+  "tablet-portrait": 768px,
+  "tablet": 968px,
+  "desktop": 1080px,
+);

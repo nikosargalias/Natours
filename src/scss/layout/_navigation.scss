@@ -1,0 +1,132 @@
+.navigation {
+  z-index: 1000;
+  position: absolute;
+
+  &--scale {
+    transform: scale(100);
+  }
+
+  &__burger {
+    max-width: 50%;
+    margin: auto;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-background {
+      z-index: 1;
+      position: absolute;
+      background: white;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      transition: all 1s;
+
+      &--expand {
+        z-index: 0;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        transition: all 1s;
+        background-image: radial-gradient(
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+    }
+
+    &-icon {
+      z-index: 2;
+      transition: all 0s;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background: $font-color-dark;
+      transition: all 0.5s;
+    }
+
+    &-icon::after,
+    &-icon::before {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "";
+      width: inherit;
+      height: inherit;
+      background: $font-color-dark;
+      transition: all 0.5s;
+    }
+
+    &-icon::after {
+      transform: translateY(-8px);
+    }
+    &-icon::before {
+      transform: translateY(8px);
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    z-index: 2000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-100vw);
+    transition: 1s all cubic-bezier(0.32, -0.3, 0.2, 1.4);
+  }
+
+  &__list {
+    list-style: none;
+
+    & :not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__link {
+    font-size: 3rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    color: $font-color-light;
+    background-image: linear-gradient(
+      110deg,
+      transparent 50%,
+      $font-color-light 50%
+    );
+    background-size: 300%;
+    transition: all 1s;
+    background-position: left;
+
+    &:hover {
+      background-position: right;
+      color: $color-primary;
+    }
+  }
+
+  &--open &__nav {
+    transform: translate(-50%, -50%) translateX(0);
+  }
+
+  &--open &__burger-background--expand {
+    transform: scale(100);
+  }
+
+  &--open &__burger-icon {
+    background: transparent;
+    transform: rotate(360deg);
+
+    &::after {
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &::before {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+}

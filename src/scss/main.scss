@@ -1,0 +1,29 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+// components
+@import "components/button";
+@import "components/img-composition";
+@import "components/feature-box";
+@import "components/card-3d";
+@import "components/testimonial";
+@import "components/bg-video";
+@import "components/form";
+@import "components/popup";
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/about-section";
+@import "layout/features-section";
+@import "layout/tours-section";
+@import "layout/testimonial-section";
+@import "layout/signup-section";
+@import "layout/footer";
+
+@import "pages/home";

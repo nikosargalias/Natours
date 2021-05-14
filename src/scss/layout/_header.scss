@@ -1,0 +1,40 @@
+@use '../forwards';
+
+.header {
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3.2rem;
+  }
+
+  &__content {
+    @include container;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading {
+    margin-bottom: $gutter-elem-big;
+  }
+
+  & .logo {
+    height: 35px;
+  }
+
+  // &__navigation {
+  //   z-index: 50000;
+  //   position: fixed;
+  //   top: 8%;
+  //   right: 50px;
+  // }
+}

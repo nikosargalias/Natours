@@ -1,0 +1,25 @@
+.feature-box {
+  max-width: 300px;
+  padding: $gutter-elem-big 1.5rem $gutter-elem-big 1.5rem;
+  background: $color-background;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.5s;
+
+  &__icon {
+    background: $color-linear-gradient;
+    background-clip: text;
+    color: transparent;
+    font-size: 7rem;
+    margin-bottom: $gutter-elem-small;
+  }
+
+  &__heading {
+    margin-bottom: $gutter-elem-small;
+  }
+
+  &:hover {
+    transform: translateY(-5%) scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.413) 0px 20px 50px;
+  }
+}
