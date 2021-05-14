@@ -9,6 +9,7 @@
   &__icon {
     background: $color-linear-gradient;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-size: 7rem;
     margin-bottom: $gutter-elem-small;

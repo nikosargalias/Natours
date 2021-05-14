@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"), //this will prompt webpack to use this as a template when generating the auto html file.
-      filename: "index.[contenthash].html",
+      filename: "index.html",
       // excludeChunks: ['entryPoint']
     }),
   ],
