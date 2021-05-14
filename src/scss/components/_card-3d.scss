@@ -26,7 +26,6 @@
   & [class*="__img-container"] {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transform: translateZ(20px);
     clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 97%);
 
     &::after {
@@ -80,6 +79,7 @@
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
+    // transform: translateZ(50px);
 
     & span {
       padding: 0.8rem 1.5rem;
@@ -150,6 +150,10 @@
       transform: rotateY(180deg);
       clip-path: none;
       margin-top: 0;
+    }
+
+    & [class*="__img-container"] {
+      transform: translateZ(20px);
     }
 
     &:hover &__back {
