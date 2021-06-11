@@ -86,7 +86,7 @@
     }
 
     .form__radio {
-      visibility: hidden;
+      // visibility: hidden;
       transform: scale(0);
 
       &:checked + .form__label--visible > .form__checkbox-custom {
